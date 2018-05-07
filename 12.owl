@@ -1,0 +1,1335 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jafra/ontologies/2018/4/IWSP#"
+     xml:base="http://www.semanticweb.org/jafra/ontologies/2018/4/IWSP"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jafra/ontologies/2018/4/IWSP">
+        <rdfs:label>A Knowledgebase for the Nearest Location in Dhaka</rdfs:label>
+        <ont:developedBy>MD Javedul Ferdous</ont:developedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#developedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#developedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#canBeAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#canBeAt">
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasActivity"/>
+        <rdfs:label>canBeDoneAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#canGo -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#canGo">
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isLocatedAt"/>
+        <rdfs:label>canGo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasActivity">
+        <rdfs:label>hasActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasArea">
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <rdfs:label>hasArea</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isLocatedAt">
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <rdfs:label>isLocatedAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isPartOf">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation"/>
+        <rdfs:label>isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CityCorporationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#CityCorporationName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CityCorporationName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CollegeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#CollegeName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#College"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CollegeName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HospitalName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#HospitalName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HospitalName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HotelName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#HotelName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HotelName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HousingAreaName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#HousingAreaName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HousingArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HousingAreaName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LocalMarketName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#LocalMarketName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LocalMarket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LocalMarketName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MedicalCollegeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#MedicalCollegeName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MedicalCollege"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PharmacyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#PharmacyName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Pharmacy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PharmacyName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SchoolName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#SchoolName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SchoolName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ShoppingComplexName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplexName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ShoppingComplexName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ThanaName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ThanaName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ThanaName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#UniversityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#UniversityName">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniversityName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BotanicalGarden -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#BotanicalGarden">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Park"/>
+        <rdfs:label>BotanicalGarden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BuyAndSell -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#BuyAndSell">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Purpose"/>
+        <rdfs:label>BuyAndSell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CItyCorporation -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Location"/>
+        <rdfs:label>CityCorporation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#College -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#College">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GeneralPark -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GeneralPark">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Park"/>
+        <rdfs:label>GeneralPark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Health -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Health">
+        <rdfs:label>Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hospital -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdfs:label>Hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hostel -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hostel">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <rdfs:label>Hostel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hotel -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <rdfs:label>Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HousingArea -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#HousingArea">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <rdfs:label>HousingArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Institute -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Institute">
+        <rdfs:label>Institute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LocalMarket -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#LocalMarket">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <rdfs:label>LocalMarket</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Location -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Location">
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Market -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Market">
+        <rdfs:label>Market</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MedicalCollege -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#MedicalCollege">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdfs:label>MedicalCollege</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Park -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Park">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Recreation"/>
+        <rdfs:label>Park</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdfs:label>Pharmacy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Purpose -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Purpose">
+        <rdfs:label>Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Recreation -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Recreation">
+        <rdfs:label>Recreation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Residance -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Residance">
+        <rdfs:label>Residance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#School -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#School">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdfs:label>School</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <rdfs:label>ShoppingComplex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Stay -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Stay">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Purpose"/>
+        <rdfs:label>Stay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Study -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Study">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Purpose"/>
+        <rdfs:label>Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Thana -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Thana">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Treatment -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Purpose"/>
+        <rdfs:label>Treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#University -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#University">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Zoo -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Zoo">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Recreation"/>
+        <rdfs:label>Zoo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AIUB -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AIUB">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Kuril"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AIUB</ont:UniversityName>
+        <rdfs:label>AIUB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AUST -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AUST">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tejgaon"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AUST</ont:UniversityName>
+        <rdfs:label>AUST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AdamjeeCantonmentCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AdamjeeCantonmentCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#College"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Cantonment"/>
+        <ont:CollegeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AdamjeeCantonmentCollege</ont:CollegeName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AdamjeeCantonmentCollege</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Aftabnagar -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Aftabnagar">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EastWestUniversity"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Aftabnagar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ApolloHospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ApolloHospital">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ApolloHospital</ont:HospitalName>
+        <rdfs:label>ApolloHospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AsianHospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AsianHospital">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MerulBadda"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsianHospital</ont:HospitalName>
+        <rdfs:label>AsianHospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Azimpur -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Azimpur">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BUET"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaCollege"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#NewMarket"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azimpur</ont:ThanaName>
+        <rdfs:label>Azimpur</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BUET -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BUET">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Azimpur"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUET</ont:UniversityName>
+        <rdfs:label>BUET</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BaddaAlatunnessaGirlsHighSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BaddaAlatunnessaGirlsHighSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MiddleBadda"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaddaAlatunnessaGirlsHighSchool</ont:SchoolName>
+        <rdfs:label>BaddaAlatunnessaGirlsHighSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BailyRoad -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BailyRoad">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <rdfs:label>BailyRoad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Baridhara -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Baridhara">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ApolloHospital"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BaridharaPark"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BashundharaResidential"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#JamunaFuturePark"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#NorthSouthUniversity"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#SydneyInternationalSchool"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baridhara</ont:ThanaName>
+        <rdfs:label>Baridhara</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BaridharaPark -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BaridharaPark">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GeneralPark"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <rdfs:label>BaridharaPark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BashundharaCity -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BashundharaCity">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Panthapath"/>
+        <ont:ShoppingComplexName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BashundharaCity</ont:ShoppingComplexName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BashundharaCity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BashundharaResidential -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BashundharaResidential">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HousingArea"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <ont:hasActivity rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Permanant"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <ont:HousingAreaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BashundharaResidential</ont:HousingAreaName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BashundharaResidential</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BestPharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BestPharmacy">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Pharmacy"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Mohakhali"/>
+        <ont:PharmacyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestPharmacy</ont:PharmacyName>
+        <rdfs:label>BestPharmacy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Buy -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Buy">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuyAndSell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cantonment -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Cantonment">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cantonment</ont:ThanaName>
+        <rdfs:label>Cantonment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CombinedMilitaryHospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CombinedMilitaryHospital">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Cantonment"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CombinedMilitaryHospital</ont:HospitalName>
+        <rdfs:label>CombinedMilitaryHospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DITPark -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DITPark">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GeneralPark"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MerulBadda"/>
+        <rdfs:label>DITPark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DITProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DITProject">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HousingArea"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <ont:hasActivity rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Permanant"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MerulBadda"/>
+        <ont:HousingAreaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DITProject</ont:HousingAreaName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DITProject</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DNCCMarket -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DNCCMarket">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LocalMarket"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan1"/>
+        <ont:LocalMarketName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNCCMarket</ont:LocalMarketName>
+        <rdfs:label>DNCCMarket</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DaffodilInternationalSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DaffodilInternationalSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dhanmondi"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DaffodilInternationalSchool</ont:SchoolName>
+        <rdfs:label>DaffodilInternationalSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DhakaCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DhakaCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#College"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Azimpur"/>
+        <rdfs:label>DhakaCollege</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DhakaEyeHospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DhakaEyeHospital">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Mirpur"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DhakaEyeHospital</ont:HospitalName>
+        <rdfs:label>DhakaEyeHospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DhakaMedicalCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DhakaMedicalCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MedicalCollege"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Ramna"/>
+        <ont:MedicalCollegeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DhakaMedicalCollege</ont:MedicalCollegeName>
+        <rdfs:label>DhakaMedicalCollege</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DhakaUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DhakaUniversity">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Ramna"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DhakaUniversity</ont:UniversityName>
+        <rdfs:label>DhakaUniversity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DhakaWestin -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DhakaWestin">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hotel"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan2"/>
+        <rdfs:label>DhakaWestin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Dhanmondi -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Dhanmondi">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dhanmondi"/>
+        <rdfs:label>Dhanmondi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EastWestUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#EastWestUniversity">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Aftabnagar"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EastWestUniversity</ont:UniversityName>
+        <rdfs:label>EastWestUniversity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Emergency -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Emergency">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Treatment"/>
+        <rdfs:label>Emergency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FirstAid -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#FirstAid">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Treatment"/>
+        <rdfs:label>FirstAid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#General -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#General">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Treatment"/>
+        <rdfs:label>General</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GreenLifePharmecy -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#GreenLifePharmecy">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Pharmacy"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MerulBadda"/>
+        <ont:PharmacyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreenLifePharmecy</ont:PharmacyName>
+        <rdfs:label>GreenLifePharmecy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Gulshan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gulshan1">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Gulshan1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Gulshan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gulshan2">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaWestin"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GulshanInternationalSchool"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GulshanPinkCity"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RajukCentralPark"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#UnitedHospitalLimited"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Gulshan2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GulshanInternationalSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#GulshanInternationalSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan2"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GulshanInternationalSchool</ont:SchoolName>
+        <rdfs:label>GulshanInternationalSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GulshanPinkCity -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#GulshanPinkCity">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan2"/>
+        <ont:ShoppingComplexName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GulshanPinkCity</ont:ShoppingComplexName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GulshanPinkCity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#JamunaFuturePark -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#JamunaFuturePark">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ShoppingComplex"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <ont:ShoppingComplexName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JamunaFuturePark</ont:ShoppingComplexName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JamunaFuturePark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KawranBazar -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#KawranBazar">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>KawranBazar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Kukrail -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kukrail">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <rdfs:label>Kukrail</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Kuril -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kuril">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AIUB"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuril</ont:ThanaName>
+        <rdfs:label>Kuril</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MerulBadda -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MerulBadda">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AsianHospital"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DITPark"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DITProject"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GreenLifePharmecy"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#OxfordInternationalSchool"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MerulBadda</ont:ThanaName>
+        <rdfs:label>MerulBadda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MiddleBadda -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MiddleBadda">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>MiddleBadda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mirpur -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Mirpur">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaEyeHospital"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#NationalBotanicalGarden"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#NationalZoo"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Mirpur</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mitford -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Mitford">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <rdfs:label>Mitford</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mohakhali -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Mohakhali">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Mohakhali</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Motijheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Motijheel">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <rdfs:label>Motijheel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NationalBotanicalGarden -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#NationalBotanicalGarden">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BotanicalGarden"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Mirpur"/>
+        <rdfs:label>NationalBotanicalGarden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NationalZoo -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#NationalZoo">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Zoo"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Mirpur"/>
+        <rdfs:label>NationalZoo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NewMarket -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#NewMarket">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LocalMarket"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Market"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Azimpur"/>
+        <ont:LocalMarketName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewMarket</ont:LocalMarketName>
+        <rdfs:label>NewMarket</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#North -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#North">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation"/>
+        <ont:CityCorporationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North</ont:CityCorporationName>
+        <rdfs:label>North</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NorthSouthUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#NorthSouthUniversity">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#University"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <ont:UniversityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthSouthUniversity</ont:UniversityName>
+        <rdfs:label>NorthSouthUniversity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NotreDameCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#NotreDameCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#College"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Motijheel"/>
+        <rdfs:label>NotreDameCollege</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OxfordInternationalSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#OxfordInternationalSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MerulBadda"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OxfordInternationalSchool</ont:SchoolName>
+        <rdfs:label>OxfordInternationalSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PanPacificSonargaon -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#PanPacificSonargaon">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hotel"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Residance"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#KawranBazar"/>
+        <rdfs:label>PanPacificSonargaon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Panthapath -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Panthapath">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <rdfs:label>Panthapath</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Permanant -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Permanant">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Stay"/>
+        <ont:canBeAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BashundharaResidential"/>
+        <ont:canBeAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DITProject"/>
+        <rdfs:label>Permanant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RahmanPharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RahmanPharmacy">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Pharmacy"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan1"/>
+        <ont:PharmacyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RahmanPharmacy</ont:PharmacyName>
+        <rdfs:label>RahmanPharmacy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RajukCentralPark -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RajukCentralPark">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GeneralPark"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan2"/>
+        <rdfs:label>RajukCentralPark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Ramna -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Ramna">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaMedicalCollege"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaUniversity"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RamnaPark"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RamnaPharmacyandGeneralStore"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#South"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramna</ont:ThanaName>
+        <rdfs:label>Ramna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RamnaPark -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RamnaPark">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GeneralPark"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Ramna"/>
+        <rdfs:label>RamnaPark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RamnaPharmacyandGeneralStore -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RamnaPharmacyandGeneralStore">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Pharmacy"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Ramna"/>
+        <ont:PharmacyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RamnaPharmacyandGeneralStore</ont:PharmacyName>
+        <rdfs:label>RamnaPharmacyandGeneralStore</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sell -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sell">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuyAndSell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SiddeshoriBoysSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SiddeshoriBoysSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BailyRoad"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SiddeshoriBoysSchool</ont:SchoolName>
+        <rdfs:label>SiddeshoriBoysSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SirSalimullahMedicalCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SirSalimullahMedicalCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MedicalCollege"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Mitford"/>
+        <ont:MedicalCollegeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SirSalimullahMedicalCollege</ont:MedicalCollegeName>
+        <rdfs:label>SirSalimullahMedicalCollege</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#South -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#South">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CItyCorporation"/>
+        <ont:CityCorporationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South</ont:CityCorporationName>
+        <rdfs:label>South</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SquareHospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SquareHospital">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Panthapath"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SquareHospital</ont:HospitalName>
+        <rdfs:label>SquareHospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SydneyInternationalSchool -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SydneyInternationalSchool">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#School"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Baridhara"/>
+        <ont:SchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SydneyInternationalSchool</ont:SchoolName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SydneyInternationalSchool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Tejgaon -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Tejgaon">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:canGo rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AUST"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <ont:ThanaName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tejgaon</ont:ThanaName>
+        <rdfs:label>Tejgaon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Temporary -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Temporary">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Stay"/>
+        <ont:canBeAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DhakaWestin"/>
+        <ont:canBeAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PanPacificSonargaon"/>
+        <rdfs:label>Temporary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#UnitedHospitalLimited -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#UnitedHospitalLimited">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Health"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hospital"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gulshan2"/>
+        <ont:HospitalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnitedHospitalLimited</ont:HospitalName>
+        <rdfs:label>UnitedHospitalLimited</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Uttara -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Uttara">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Thana"/>
+        <ont:isPartOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#North"/>
+        <rdfs:label>Uttara</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ViqarunnisaNoonSchoolandCollege -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ViqarunnisaNoonSchoolandCollege">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#College"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Institute"/>
+        <ont:isLocatedAt rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BailyRoad"/>
+        <rdfs:label>ViqarunnisaNoonSchoolandCollege</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:label>City Corporation</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
